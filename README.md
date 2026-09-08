@@ -48,7 +48,7 @@ can be used for gain access into machines you don't have permissions. Please, al
   
   > python3 -m http.server 8000
   
-  expected output : >  └──╼ $ python3 -m http.server 8000
+  expected output : >
 
                     Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
@@ -72,7 +72,7 @@ can be used for gain access into machines you don't have permissions. Please, al
 
 ✅ Stablished conection. 
  
- 
+📹 see demo in **demo.mp4** 
 
 
 
