@@ -52,7 +52,11 @@ can be used for gain access into machines you don't have permissions. Please, al
  
   > python3 --version
   
-  expected output : >  Python 3.13.5
+  expected output : 
+
+
+  >  Python 3.13.5
+
   
   Then, Make a temporal server.
   
